@@ -1,21 +1,32 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
-
-    <title>PradoJ.com</title>
+    <meta name="description" content="PradoJ, PradoJ.com, desenvolvimento e consultoria em ti, http://pradoj.com/">
+    <meta name="author" content="RogerioPradoJ, PradoJ, PradoJ.com, http://pradoj.com/">
+    <link rel="icon" href="/favicon.ico">
+    <title>PradoJ.com - Desenvolvimento e consultoria em TI</title>
 
     <!-- Bootstrap core CSS -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha256-7s5uDGW3AHqw6xtJmNNtr+OBRJUlgkNJEo78P4b0yRw= sha512-nNo+yCHEyn0smMxSswnf/OnX6/KwJuZTlNZBjauKhTK0c+zT+q5JOCx0UFhXQ6rJR9jg6Es8gPuD2uZcYDLqSw==" crossorigin="anonymous">
 
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <link href="https://maxcdn.bootstrapcdn.com/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
+
+    <style type="text/css">
+      #goog-wm { }
+      #goog-wm h3.closest-match { }
+      #goog-wm h3.closest-match a { }
+      #goog-wm h3.other-things { }
+      #goog-wm ul li { }
+      #goog-wm li.search-goog { display: block; }
+      #goog-wm-qt {
+        color: black;
+      }
+    </style>
 
     <!-- Custom styles for this template -->
     <link href="/cover.css" rel="stylesheet">
@@ -44,14 +55,25 @@
           <div class="inner cover">
             <h1 class="cover-heading">Erro 404</h1>
             <p class="lead">A página que você procurou não foi encontrada.</p>
+            <hr>
             <p class="lead">
+              <script type="text/javascript">
+                var GOOG_FIXURL_LANG = (navigator.language || '').slice(0,2),
+                    GOOG_FIXURL_SITE = location.host;
+              </script>
+              <script type="text/javascript" 
+                  src="http://linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js"></script>
+              <hr>
               <a href="/" class="btn btn-lg btn-default">Voltar para tela inicial</a>
             </p>
           </div>
 
           <div class="mastfoot">
             <div class="inner">
-              <p>&copy; 2015 <a href="pradoj.com">pradoj.com</a></p>
+              <p>&copy; <script type="text/javascript">
+              var currentTime = new Date();
+              document.write(currentTime.getFullYear());
+              </script><a href="http://pradoj.com/"> pradoj.com</a> </p>
             </div>
           </div>
 
@@ -70,6 +92,9 @@
         r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
         ga('create','UA-33078216-1','auto');ga('send','pageview');
     </script>
+    <script type="text/javascript">
+      _gaq.push(["_trackEvent", "SEO", "404 Error", document.location]);
+    </script>
     <!-- Bootstrap core JavaScript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
@@ -77,5 +102,20 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="https://maxcdn.bootstrapcdn.com/js/ie10-viewport-bug-workaround.js"></script>
+    
+    <script>
+      (function() {
+        var element = $('#goog-wm-sb');
+        element.val('Pesquisa Google');
+        element.addClass("btn btn-xs btn-default");
+
+        element = $('.other-things > b');
+        element.text('Quer tentar a busca?')
+
+        var element = $('.search-goog');
+        element.html(element.html().replace('Search', 'Pesquisar em'));
+
+      })();
+    </script>
   </body>
 </html>

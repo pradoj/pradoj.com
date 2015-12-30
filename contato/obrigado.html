@@ -16,13 +16,25 @@
     <link href="https://maxcdn.bootstrapcdn.com/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
 
     <style type="text/css">
-      /* Move down content because we have a fixed navbar that is 50px tall */
-      body {
-        padding-top: 50px;
-        padding-bottom: 20px;
+      html {
+        position: relative;
+        min-height: 100%;
       }
+      body {
+        /* Margin bottom by footer height */
+        margin-bottom: 90px;
+        padding-top: 50px;
+      }
+      .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        /* Set the fixed height of the footer here */
+        height: 90px;
+        /*background-color: #f5f5f5;*/
+      } 
     </style>
-    
+
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
@@ -45,9 +57,9 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Home</a></li>
+            <li><a href="/">Home</a></li>
             <li><a href="/blog/">Blog</a></li>
-            <li><a href="/contato/">Contato</a></li>
+            <li class="active"><a href="/contato/">Contato</a></li>
             <li><a href="/apps/">Aplicativos</a></li>
             <li><a href="https://github.com/pradoj">GitHub Repos</a></li>
           </ul>
@@ -55,53 +67,42 @@
       </div>
     </nav>
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Olá, somos a PradoJ.com!</h1>
-        <p>Trabalhamos com desenvolvimento e consultoria em TI.</p>
-        <p>Você já conhece nossos excepcionais aplicativos?</p>
-      </div>
-    </div>
-
     <div class="container">
-
-      <!-- Example row of columns -->
-      <div class="row">
-        <div class="col-md-4" style="background: url(/images/jana-64.png) no-repeat center bottom; " >
-          <h2>Calculadora da Jana</h2>
-          <p>Divirta-se com a sensacional calculadora para advogados.</p>
-          <p>Com ela os nossos amigos da ordem podem calcular quanto cobrar de honorários de seus clientes de acordo com seu humor.</p>
-          <p><a class="btn btn-primary btn-lg" href="http://pradoj.com/apps/jana/">Acesse &raquo;</a></p>
-          <p><a class="btn btn-default" href="https://github.com/pradoj/jana-calculator">github &raquo;</a></p>
-        </div>
-        <div class="col-md-4" style="background: url(/images/tati-64.png) no-repeat center bottom; " >
-          <h2>IMC para a Tati</h2>
-          <p>O que acha de calcular o seu IMC (índice de massa corpórea) sem precisar mostrar o seu peso?</p>
-          <p>Esse é o objetivo dessa surpreendente calculadora de IMC, que não deixa os curiosos enxergarem essa informação por cima do seu ombro enquanto você está digitando.</p>
-          <p><a class="btn btn-primary btn-lg" href="http://pradoj.com/apps/tati/">Acesse &raquo;</a></p>
-          <p><a class="btn btn-default" href="https://github.com/pradoj/tati-imc">github &raquo;</a></p>
-        </div>
-        <div class="col-md-4" style="background: url(/images/cppc-64.png) no-repeat center bottom; " >
-          <h2>Calculadora Percentual</h2>
-          <p>Você conhece alguém com dificuldades para fazer contas de percentagem, mesmo com uma calculadora na mão?</p>
-          <p>A CpPc (Calculadora Percentual - Percentage Calculator) é a solução ideal para você (ops, para seu conhecido!).</p>
-          <p>Calcule percentagem entre dois números, com a relação entre eles nos dois sentidos, e também uma percentagem simples de um número.</p>
-          <p><a class="btn btn-primary btn-lg" href="http://pradoj.com/apps/cppc/">Acesse &raquo;</a></p>
-          <p><a class="btn btn-default" href="https://github.com/pradoj/porcento_percent">github &raquo;</a></p>
-        </div>
+          <div class="row">
+              <div class="col-md-12 text-center">
+                <p class="lead">
+                  <h1>Agradecemos seu contato.</h1>
+                  <a href="/" class="btn btn-lg btn-default">Voltar para tela inicial</a>
+                </p>
+              </div>
+          </div>
       </div>
 
-      <footer>
+      <style>
+          .header {
+              color: #36A0FF;
+              font-size: 27px;
+              padding: 10px;
+          }
+
+          .bigicon {
+              font-size: 35px;
+              color: #36A0FF;
+          }
+      </style>
+
+      <footer class="footer">
+        <div class="container">
         <hr>
-        <p>&copy; <script type="text/javascript">
-        var currentTime = new Date();
-        document.write(currentTime.getFullYear());
-        </script><a href="http://pradoj.com/"> pradoj.com</a> </p>
+          <p>&copy; <a href="http://pradoj.com/">pradoj.com</a> <script type="text/javascript">
+          var currentTime = new Date();
+          document.write(currentTime.getFullYear());
+          </script></p>
+        </div>
       </footer>
 
     </div> <!-- /container -->
-	<!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
+  <!-- Asynchronous Google Analytics snippet. Change UA-XXXXX-X to be your site's ID.
        mathiasbynens.be/notes/async-analytics-snippet -->
     <script>
       var _gaq=[['_setAccount','UA-33078216-1'],['_trackPageview'],['_trackPageLoadTime']];
